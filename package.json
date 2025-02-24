@@ -1,6 +1,6 @@
 {
   "description": "A package from manager packages for sauvvitech services",
-  "name": "boilerplate",
+  "name": "st-packages",
   "version": "1.0.0",
   "main": "./lib/index.js",
   "scripts": {
