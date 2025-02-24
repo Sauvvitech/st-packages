@@ -5,39 +5,39 @@ console.log(`GITHUB_REF_NAME=${process.env.GITHUB_REF_NAME}`);
 
 module.exports = {
   plugins: [
-    "@semantic-release/commit-analyzer",
-    "@semantic-release/release-notes-generator",
+    '@semantic-release/commit-analyzer',
+    '@semantic-release/release-notes-generator',
     [
-      "@semantic-release/changelog",
+      '@semantic-release/changelog',
       {
         changelogFile: `CHANGELOG_${branch}.md`,
       },
     ],
     [
-      "@semantic-release/npm",
+      '@semantic-release/npm',
       {
         npmPublish: false,
       },
     ],
     [
-      "@semantic-release/exec",
+      '@semantic-release/exec',
       {
         prepareCmd:
-          "./setup/set-version.sh -b ${branch.name} -v ${nextRelease.version}",
+          './setup/set-version.sh -b ${branch.name} -v ${nextRelease.version}',
       },
     ],
     [
-      "@semantic-release/git",
+      '@semantic-release/git',
       {
-        message: "ci: release <%= nextRelease.version %> [skip ci]",
+        message: 'ci: release <%= nextRelease.version %> [skip ci]',
         assets: [`version_${branch}.json`, `CHANGELOG_${branch}.md`],
       },
     ],
   ],
   branches: [
-    { name: "main" },
-    { name: "stage", channel: "beta", prerelease: "beta" },
+    { name: 'main' },
+    { name: 'stage', channel: 'beta', prerelease: 'beta' },
   ],
-  type: "git",
-  url: "git@github.com:whitebeardit/node-boilerplate.git",
+  type: 'git',
+  url: 'git@github.com:Sauvvitech/st-packages.git',
 };
