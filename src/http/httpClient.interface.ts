@@ -187,4 +187,7 @@ export interface IHeadersConfig {
   ['x-spin-signature']?: string | number;
   ['x-spin-timestamp']?: string | number;
   ['origin']?: string;
+  ['x-user-groups']?: string | number;
+  ['x-user-id']?: string | number;
+  ['x-user-username']?: string | number;
 }
