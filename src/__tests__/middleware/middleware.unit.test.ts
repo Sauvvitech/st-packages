@@ -53,7 +53,7 @@ describe('authorizeByGroup', () => {
 
     expect(res.status).toHaveBeenCalledWith(403);
     expect(res.json).toHaveBeenCalledWith({
-      error: `Access denied'`,
+      error: `Access denied`,
     });
     expect(next).not.toHaveBeenCalled();
   });
